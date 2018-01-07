@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/angular-chart.js"></script>
+    <script src="index.js"></script>
+    <style>
+        .chart{
+            width: 46%;
+            display: inline-block;
+        }
+        .chartTwo{
+            width: 46%;
+            display: inline-block;
+        }
+        p{
+            margin-left: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <div ng-controller="cryptocurrencyCtrl">
+        <h1> Cryptocurrency Market Capitalizations</h1>
+        <div class="chart">
+            <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series"></canvas>
+            <p>Percent change in 24 hours</p>
+        </div>
+        <div class="chart">
+            <canvas id="bar" class="chart chart-bar" chart-data="exchangeRate" chart-labels="labels" chart-series="series"></canvas>
+            <p>Value of cryptocurrencies in USD</p>
+        </div>
+        
+    </div>
+
+
+</body>
+</html>
